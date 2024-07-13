@@ -7,7 +7,7 @@ interface ImageData {
   link: string;
 }
 
-const AnkleStraps: React.FC = () => {
+const FetchImages: React.FC = () => {
   const [images, setImages] = useState<ImageData[]>([]);
 
   useEffect(() => {
@@ -38,4 +38,4 @@ const AnkleStraps: React.FC = () => {
   );
 };
 
-export default AnkleStraps;
+export default FetchImages;
