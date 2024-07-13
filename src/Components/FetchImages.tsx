@@ -5,6 +5,7 @@ interface ImageData {
   src: string;
   alt: string;
   link: string;
+  price?: string;
 }
 
 interface FetchImagesProps {
@@ -44,6 +45,7 @@ const FetchImages: React.FC<FetchImagesProps> = ({ folder }) => {
                 alt={image.alt}
                 className="border rounded-lg w-full h-auto hover:scale-110 transition-transform duration-300 cursor-pointer"
               />
+              <span>{image.price}</span>
             </Link>
           </div>
         ))}
