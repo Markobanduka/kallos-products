@@ -7,17 +7,31 @@ interface ImageData {
   link: string;
 }
 
-const FetchImages: React.FC = () => {
+interface FetchImagesProps {
+  folder: string;
+}
+
+const FetchImages: React.FC<FetchImagesProps> = ({ folder }) => {
   const [images, setImages] = useState<ImageData[]>([]);
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Markobanduka/kallos/main/public/images.json"
-    )
-      .then((response) => response.json())
-      .then((data) => setImages(data))
-      .catch((error) => console.error("Error fetching images:", error));
-  }, []);
+    const fetchImages = async () => {
+      try {
+        const response = await fetch(
+          `https://raw.githubusercontent.com/Markobanduka/kallos/main/public/${folder}images.json`
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setImages(data);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+
+    fetchImages();
+  }, [folder]);
 
   return (
     <div className="container mx-auto p-6">
