@@ -1,0 +1,22 @@
+[
+  {
+    "src": "https://raw.githubusercontent.com/Markobanduka/kallos/main/public/category-barbell-pad.png",
+    "alt": "category-barbell-pad",
+    "link": "/barbell-pad"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/Markobanduka/kallos/main/public/category-ankle-straps.png",
+    "alt": "category-ankle-straps",
+    "link": "/ankle-straps"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/Markobanduka/kallos/main/public/category-chalk.png",
+    "alt": "category-chalk",
+    "link": "/chalk"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/Markobanduka/kallos/main/public/category-liquid-chalk.png",
+    "alt": "category-liquid-chalk",
+    "link": "/liquid-chalk"
+  }
+]
