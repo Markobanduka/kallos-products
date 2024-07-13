@@ -45,7 +45,9 @@ const FetchImages: React.FC<FetchImagesProps> = ({ folder }) => {
                 alt={image.alt}
                 className="border rounded-lg w-full h-auto hover:scale-110 transition-transform duration-300 cursor-pointer"
               />
-              <span>{image.price}</span>
+              <span className="block text-2xl font-bold mt-6">
+                {image.price}
+              </span>
             </Link>
           </div>
         ))}
